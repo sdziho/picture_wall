@@ -32,8 +32,7 @@ const WrapperImages = styled.div`
   display: grid;
   grid-gap: 2em;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
-  grid-auto-rows: 300px;
+  grid-auto-rows: minmax(300px,auto);
 `;
 
 const Options=styled.a`
@@ -87,7 +86,7 @@ function App() {
       });
   }
   const toGray=()=>{
-    if(gray=="?") setGray("?grayscale&");
+    if(gray==="?") setGray("?grayscale&");
     else setGray("?")
   }
   const handleOnChange = (e:any) =>{
